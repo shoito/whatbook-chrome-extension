@@ -1,0 +1,194 @@
+{
+    "name": "__MSG_appName__",
+    "version": "1.0.1",
+    "manifest_version": 2,
+    "description": "__MSG_appDescription__",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "ja",
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "scripts/background.js"
+        ]
+    },
+    "page_action": {
+      "default_icon": {
+        "19": "images/icon-19.png",
+        "38": "images/icon-38.png"
+      },
+      "default_title": "__MSG_appName__",
+      "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "content_scripts": [
+      {
+        "matches": [
+          "http://www.amazon.co.jp/**/*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-amazon.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_idle",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://www.7netshopping.jp/books/detail/*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-7net.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://store.shopping.yahoo.co.jp/*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-yahoo.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://books.rakuten.co.jp/rb/*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-rakuten.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_idle",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://shop.tsutaya.co.jp/**/product-book-*/*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-tsutaya-shop.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_start",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://store.tsutaya.co.jp/item/sell_book/*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-tsutaya-store.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_start",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://www.junkudo.co.jp/mj/products/detail*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-junkudo.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://books.shoeisha.co.jp/book/*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-shoeisha.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://www.e-hon.ne.jp/bec/SA/Detail*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-e-hon.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": false
+      },
+      {
+        "matches": [
+          "http://www.kinokuniya.co.jp/f/dsg-01-*"
+        ],
+        "css": [
+          "styles/main.css"
+        ],
+        "js": [
+          "components/jquery/jquery.js",
+          "scripts/util.js",
+          "scripts/cs-kinokuniya.js",
+          "scripts/cs-common.js"
+        ],
+        "run_at": "document_idle",
+        "all_frames": false
+      }
+    ],
+    "permissions": [
+      "tabs",
+      "storage",
+      "http://*/*",
+      "https://*/*"
+    ]
+}

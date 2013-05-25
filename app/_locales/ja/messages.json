@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "それ、どんな本？",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Amazonで今見ている本が、どんな本か教えてくれる拡張機能です。本の要約はソーシャルリーディングサービスbukupeから探します。",
+    "description": "The description of the application"
+  }
+}
