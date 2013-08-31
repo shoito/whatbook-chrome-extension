@@ -280,17 +280,21 @@ CalilCitySelectDlg:: =
             return
         @selectFunc = options.select_func or false
         self = this
-        $(".calil_place_dialog_close").click ->
+        $(".calil_place_dialog_close").click (e)->
+            e.preventDefault()
             self.closeDlg()
 
         $("#calil_pref_selector a").each (i, e) ->
             temp = $(e).attr("href").split("/")
             pref = temp[temp.length - 1]
-            $(e).attr("href", "#").on "mouseup", (e) ->
-                e.stopPropagation()
+            $(e).attr("href", "#").click (e) ->
+                e.preventDefault()
                 self.load_pref pref
 
-        $(".calil_hide_city").click @hidecity
+        $(".calil_hide_city").click (e) ->
+            e.preventDefault()
+            self.hidecity()
+
         $(window).resize ->
             self.placeDialogWrapper.css "height", $(window).height()
             self.placeDialogWrapper.css "width", $(window).width()
@@ -365,8 +369,8 @@ CalilCitySelectDlg:: =
         $("#calil_city_selector .calil_pref_list a").each (i, e) ->
             temp = $(e).attr("href").split("/")
             pref = temp[temp.length - 1]
-            $(e).attr("href", "#").on "mouseup", (e) ->
-                e.stopPropagation()
+            $(e).attr("href", "#").click (e) ->
+                e.preventDefault()
                 self.get_systemid pref
 
     hidecity: ->

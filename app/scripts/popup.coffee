@@ -48,16 +48,16 @@ chrome.tabs.getSelected null, (tab) ->
         $("#next").click =>
             next()
 
-        $("#lib-select").on "mousedown", (e) ->
-            e.stopPropagation()
+        $("#lib-select").on "click", (e) ->
+            e.preventDefault()
             new CalilCitySelectDlg(
-                        appkey: "b76b6d0249f02659c5f62c4d0ff7a113"
-                        select_func: (systemId, pref) ->
-                                        localStorage.setItem "pref", JSON.stringify({systemIds: systemId, pref: pref})
-                                        systemIds = systemId
-                                        $("#pref").show()
-                                        $("#pref-name").text pref
-                                        showCalil()
+                appkey: "b76b6d0249f02659c5f62c4d0ff7a113"
+                select_func: (systemId, pref) ->
+                                localStorage.setItem "pref", JSON.stringify({systemIds: systemId, pref: pref})
+                                systemIds = systemId
+                                $("#pref").show()
+                                $("#pref-name").text pref
+                                showCalil()
             ).showDlg()
 
         showCalil()
