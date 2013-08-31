@@ -124,7 +124,7 @@ module.exports = (grunt) ->
     #            dist: {}
     #        },
     useminPrepare:
-      html: ["<%= yeoman.app %>/popup.html", "<%= yeoman.app %>/options.html"]
+      html: ["<%= yeoman.app %>/popup.html"]
       options:
         dest: "<%= yeoman.dist %>"
 
@@ -198,7 +198,7 @@ module.exports = (grunt) ->
           dest: "<%= yeoman.dist %>"
           src: [
             "scripts/popup.js"
-            "scripts/options.js"
+            "scripts/calilapi.js"
           ]
         ]
       dist:

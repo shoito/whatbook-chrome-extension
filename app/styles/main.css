@@ -44,13 +44,13 @@ p {
     overflow: hidden;
     text-overflow: ellipsis;
     color: white;
+    vertical-align: middle;
 }
 i {
     margin-left: 4px;
 }
 #title-box {
     width: 400px;
-    vertical-align: middle;
 }
 #btn-box {
     width: 110px;
@@ -66,6 +66,13 @@ i {
 #page {
     width: 36px;
     color: #e4e4e4;
+}
+#calil {
+    margin: 16px 10px 0 10px;
+    border-top: 1px solid #ececec;
+}
+#pref {
+    margin: 8px 0 0 0;
 }
 footer {
     color: #222;

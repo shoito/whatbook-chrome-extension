@@ -16,4 +16,4 @@ $.ajax
     console.error error
   
 chrome.runtime.onMessage.addListener (request, sender, sendResponse) ->
-    sendResponse summaries if request.msg is "getSummaries"
+    sendResponse {isbn: window.whatbook.isbn, summaries: summaries} if request.msg is "getSummaries"

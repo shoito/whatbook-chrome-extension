@@ -1,26 +1,39 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link href="components/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link href="styles/main.css" rel="stylesheet">
-        <script src="components/jquery/jquery.js"></script>
-        <script src="components/bootstrap/bootstrap/js/bootstrap.js"></script>
-        <!-- build:js scripts/popup.js -->
-        <script src="scripts/popup.js"></script>
-        <!-- endbuild -->
-    </head>
-    <body>
-        <header id="controls">
-            <i class="icon-book icon-white"></i>
-            <div id="title-box"><a id="title"></a></div>
-            <div id="page"></div>
-            <div id="btn-box" class="btn-group">
-                <button id="prev" class="btn btn-primary">Prev</button>
-                <button id="next" class="btn btn-primary">Next</button>
-            </div>
-        </header>
-        <section id="summaries"></section>
-        <footer>powerd by <a href="http://bukupe.com/" target="_blank">bukupe</a></footer>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <link href="components/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <script src="components/jquery/jquery.js"></script>
+    <script src="components/bootstrap/bootstrap/js/bootstrap.js"></script>
+    <!-- build:js scripts/calilapi.js -->
+    <script src="scripts/calilapi.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/popup.js -->
+    <script src="scripts/popup.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+    <header id="controls">
+        <i class="icon-book icon-white"></i>
+        <div id="title-box"><a id="title"></a></div>
+        <div id="page"></div>
+        <div id="btn-box" class="btn-group">
+            <button id="prev" class="btn btn-primary">Prev</button>
+            <button id="next" class="btn btn-primary">Next</button>
+        </div>
+    </header>
+    <section id="summaries"></section>
+    <section id="calil">
+        <h3>図書館検索カーリル
+            <small id="pref">
+                図書館を探す場所:
+                <strong id="pref-name"></strong>
+                <span>(<a id="lib-select" href="#">変更する</a>)</span>
+            </small>
+        </h3>
+        <section class="calil-render"></section>
+    </section>
+    <footer>powerd by <a href="http://bukupe.com/" target="_blank">bukupe</a></footer>
+</body>
 </html>
